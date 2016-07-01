@@ -43,7 +43,7 @@ int main( int argc, char *argv[] ) {
    
    /* Now start listening for the clients, here
     * process will go in sleep mode and will wait
-    * for the incoming connection
+    * for the incoming connection(s).
     */
    listen(sockfd,5);
    clilen = sizeof(cli_addr); /* Client length equals sizeof (incoming) client-address */
