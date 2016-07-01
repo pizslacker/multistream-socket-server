@@ -4,9 +4,9 @@
 / Created:       20160629-12:51-GMT+1
 /
 / Creator:       Kim Olsen <post@kimeriktjoraolsen.no>
-/ Lastchanhge:   20160701-04:52-GMT+1
+/ Lastchanhge:   20160701-05:26-GMT+1
 /
-/ Multitream socket server, implemented in ANSI C.
+/ Multistream socket server, implemented in ANSI C.
 /
 ******************************************************/
 
