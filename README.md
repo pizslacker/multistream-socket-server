@@ -1,3 +1,3 @@
 # mutistream-socket-server
 
-Multitream socket server, implemented in C.
+Multistream socket server, implemented in C.
