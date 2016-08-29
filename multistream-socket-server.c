@@ -3,7 +3,7 @@
 * Created:       20160629-12:51-GMT+1
 *
 * Creator:       Kim Olsen <post@kimeriktjoraolsen.no>
-* Lastchanhge:   20160701-05:26-GMT+1
+* Lastchange:   20160701-05:26-GMT+1
 *
 * Multistream socket server, implemented in ANSI C.
 */
