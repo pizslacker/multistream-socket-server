@@ -14,7 +14,23 @@
 #include <netinet/in.h>
 #include <string.h>
 
-void doprocessing (int sock);
+void doprocessing (int sock) {
+   int n;
+   char buffer[256]; /* 256 bytes character buffer */
+   bzero(buffer,256);
+   n = read(sock,buffer,255); /* Read input (up to 255 chars) from socket */   
+   if (n < 0) { /* Error on input from socket */
+      perror("MSS: ERROR reading from socket\n");
+      exit(1); /* Error-exit 1 */
+   }
+   
+   printf("Here is the message: %s\n",buffer);
+   n = write(sock,"I got your message",18); /* Write 18-Byte output to socket */ 
+   if (n < 0) { /* Error on output to socket */
+      perror("MSS: ERROR writing to socket\n");
+      exit(1); /* Error-exit 1 */
+   }
+}
 
 int main( int argc, char *argv[] ) {
    int sockfd, newsockfd, portno, clilen;
@@ -67,23 +83,4 @@ int main( int argc, char *argv[] ) {
          close(newsockfd); /* Close new connection */
       }	
    } /* end of while */
-}
-
-void doprocessing (int sock) {
-   int n;
-   char buffer[256]; /* 256 bytes character buffer */
-   bzero(buffer,256);
-   n = read(sock,buffer,255); /* Read input (up to 255 chars) from socket */   
-   if (n < 0) { /* Error on input from socket */
-      perror("MSS: ERROR reading from socket\n");
-      exit(1); /* Error-exit 1 */
-   }
-   
-   printf("Here is the message: %s\n",buffer);
-   n = write(sock,"I got your message",18); /* Write 18-Byte output to socket */ 
-   if (n < 0) { /* Error on output to socket */
-      perror("MSS: ERROR writing to socket\n");
-      exit(1); /* Error-exit 1 */
-   }
-	
 }
