@@ -2,8 +2,8 @@
 * Name:          Multistream Socket Server (in C)
 * Created:       20160629-12:51-GMT+1
 *
-* Creator:       Kim Olsen <post@kimeriktjoraolsen.no>
-* Lastchange:   20170320-13:48-GMT+1
+* Creator:       (c)2017 Kim Olsen post-at-kimeriktjoraolsen-dot-no
+* Lastchange:    20170731-17:24-GMT+1
 *
 * Multistream socket server, implemented in ANSI C.
 */
